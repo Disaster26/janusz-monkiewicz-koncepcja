@@ -38,7 +38,7 @@ p{margin:0 0 1em}
 
 /* nagłówek */
 .nag{position:fixed;inset:0 0 auto;z-index:50;height:var(--nag);display:flex;align-items:center;background:#fff;color:var(--tekst);box-shadow:0 1px 0 var(--linia)}
-.nag .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(1840px,100% - 2*var(--m))}
+.nag .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(1760px,100% - 2*var(--m))}
 .marka{display:inline-flex;align-items:center;gap:10px;font-family:var(--naglowki);font-stretch:82%;font-size:22px;font-weight:700;text-decoration:none;white-space:nowrap}
 .znak{width:38px;height:38px;flex:none}
 .menu{display:flex;gap:30px;font-size:15px;font-weight:500}
@@ -61,7 +61,8 @@ p{margin:0 0 1em}
 .hero{display:flex;flex-direction:column;min-height:100svh;padding-top:var(--nag);background:#fff}
 .tryptyk picture{display:block}
 .tryptyk .p1 img{width:100%;height:auto}
-.klatka-podpis,.styk{display:none}
+.klatka-podpis,.fakty,.link-om{display:none}
+.hero-akcje{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .duo{display:none;gap:6px;margin-top:6px}
 .duo .ramka::before,.duo .ramka::after{width:14px;height:14px}
 .duo .ramka::before{top:7px;left:7px}.duo .ramka::after{bottom:7px;right:7px}
@@ -79,23 +80,25 @@ p{margin:0 0 1em}
 
 /* pierwszy ekran - komputer: stół podświetlany, klatka w naturalnym rozmiarze + arkusz kolejnych klatek */
 @media (min-width:900px){
-  .hero{--fw:min(990px,58vw - 40px,(100svh - var(--nag) - 262px)*1.518);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(32px,4vw,72px);height:100svh;min-height:640px;padding:calc(var(--nag) + 24px) var(--m) 24px;background:var(--stol)}
+  .hero{--fw:min(990px,58vw - 40px,(100svh - var(--nag) - 140px)*1.518);display:grid;grid-template-columns:minmax(0,1fr) var(--fw);align-items:center;column-gap:clamp(40px,4.5vw,96px);height:100svh;min-height:640px;padding:calc(var(--nag) + 20px) max(var(--m),(100% - 1760px)/2) 20px;background:var(--stol)}
   .tryptyk{grid-column:2;grid-row:1;width:var(--fw)}
-  .tryptyk .p1 img{width:var(--fw);height:auto;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+  .tryptyk .p1 img{width:var(--fw);height:auto}
   .tryptyk .p1.ramka::before,.tryptyk .p1.ramka::after{width:34px;height:34px;border-color:var(--zolty);opacity:1}
   .tryptyk .p1.ramka::before{top:-12px;left:-12px;border-top-width:4px;border-left-width:4px}
   .tryptyk .p1.ramka::after{bottom:-12px;right:-12px;border-bottom-width:4px;border-right-width:4px}
-  .klatka-podpis{display:block;font-size:14px;color:var(--szary);margin:20px 0 18px}
+  .klatka-podpis{display:block;font-size:14px;color:var(--szary);margin:22px 0 0}
   .klatka-podpis .nr{color:var(--tekst);margin-right:6px}
-  .styk{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;list-style:none;margin:0;padding:0}
-  .styk li{position:relative}
-  .styk img{width:100%;aspect-ratio:3/2;object-fit:cover;background:#ddd}
-  .styk .nr{display:block;font-size:12px;color:var(--szary);margin-top:5px}
-  .hero-tekst{grid-column:1;grid-row:1;flex:none;display:block;justify-self:end;max-width:480px;padding:0}
+  .hero-tekst{grid-column:1;grid-row:1;flex:none;display:block;justify-self:start;max-width:620px;padding:0}
   .hero .podpis-zdj{display:none}
-  .hero h1{font-size:clamp(52px,5.4vw,96px)}
-  .hero .lead{font-size:19px;margin-top:18px}
-  .hero .przycisk{margin-top:30px}
+  .hero h1{font-size:clamp(56px,5.6vw,108px)}
+  .hero .lead{font-size:clamp(18px,1.3vw,21px);margin-top:18px}
+  .fakty{display:block;list-style:none;margin:28px 0 0;padding:0;max-width:34em}
+  .fakty li{padding:10px 0;border-top:1px solid #D3D6DA;font-size:15px;line-height:1.45;color:#33363A}
+  .fakty li:last-child{border-bottom:1px solid #D3D6DA}
+  .hero-akcje{margin-top:30px}
+  .hero .przycisk{margin-top:0}
+  .link-om{display:inline-block;font-weight:600;font-size:17px;text-decoration:none;border-bottom:2px solid var(--tekst);padding-bottom:2px}
+  .link-om:hover{border-bottom-color:var(--zolty)}
 }
 
 /* sekcje */
@@ -277,19 +280,18 @@ figcaption b{display:block;color:var(--tekst);font-weight:600;font-size:15px}
       <span class="ramka" style="flex:1.45"><img src="img/m-ryby-400.webp" width="400" height="276" alt="" loading="lazy" decoding="async"></span>
       <span class="ramka" style="flex:1.55"><img src="img/m-grabarka-400.webp" width="400" height="258" alt="" loading="lazy" decoding="async"></span>
     </div>
-    <ol class="styk" aria-label="Kolejne klatki z archiwum">
-      <li><img src="img/m-ryby-400.webp" width="400" height="276" alt="Wędkarze w łodzi o zmierzchu" loading="lazy" decoding="async"><span class="nr">02</span></li>
-      <li><img src="img/g-grabarka-480.webp" width="480" height="320" alt="Cerkiew w Grabarce zimą" loading="lazy" decoding="async"><span class="nr">03</span></li>
-      <li><img src="img/g-zurawie-480.webp" width="480" height="320" alt="Żurawie na polu" loading="lazy" decoding="async"><span class="nr">04</span></li>
-      <li><img src="img/g-ikonostas-480.webp" width="480" height="320" alt="Ikonostas w Grabarce" loading="lazy" decoding="async"><span class="nr">05</span></li>
-      <li><img src="img/g-wydra-480.webp" width="480" height="320" alt="Wydra w wodzie" loading="lazy" decoding="async"><span class="nr">06</span></li>
-    </ol>
   </div>
   <div class="hero-tekst">
     <p class="podpis-zdj"><span class="nr">01</span> Ryś, Grand Prix Konkursu im. Włodzimierza Puchalskiego, 2002</p>
     <h1 id="h1">Janusz Monkiewicz</h1>
     <p class="lead">Artysta fotografik z Pisza. Przyroda i architektura w Polsce i nie tylko, około 50 000 klatek w archiwum.</p>
-    <a class="przycisk" href="#archiwum" id="hero-cta">Otwórz archiwum <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+    <ul class="fakty">
+      <li>Grand Prix Konkursu im. Włodzimierza Puchalskiego, 2002</li>
+      <li>Artysta Fotograf RP (AFRP), Fotoklub Rzeczypospolitej Polskiej</li>
+      <li>Prezes ZPFP Okręgu Warmińsko-Mazurskiego w latach 2002-2006 i 2010-2013</li>
+      <li>Albumy "Warmińsko-Mazurskie" i "Dolnośląskie", wydawnictwo Bosz</li>
+    </ul>
+    <div class="hero-akcje"><a class="przycisk" href="#archiwum" id="hero-cta">Otwórz archiwum <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a><a class="link-om" href="#o-mnie">O mnie</a></div>
   </div>
 </section>
 

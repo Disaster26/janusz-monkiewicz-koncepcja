@@ -148,5 +148,18 @@
     info.textContent = 'Dziękuję. Na gotowej stronie zapytanie trafi na monkiewicz@janusz-monkiewicz.pl (w podglądzie nic nie zostało wysłane).';
   });
 
+  /* po odświeżeniu zaczynaj od góry (chyba że link prowadzi do sekcji) */
+  if ('scrollRestoration' in history && !location.hash) { history.scrollRestoration = 'manual'; window.scrollTo(0, 0); }
+
+  /* płynne wejście treści przy przewijaniu */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var el = d.querySelectorAll('.cytat, .om-uklad, .ar-glowa, .za-tekst, .za-zdjecia, .dorobek h2, .do-uklad, .kontakt');
+    d.documentElement.classList.add('anim');
+    var io = new IntersectionObserver(function (wpisy) {
+      wpisy.forEach(function (w) { if (w.isIntersecting) { w.target.classList.add('widoczne'); io.unobserve(w.target); } });
+    }, { rootMargin: '0px 0px 40px 0px' });
+    [].forEach.call(el, function (e) { e.classList.add('wejscie'); io.observe(e); });
+  }
+
   var rok = d.getElementById('rok'); if (rok) rok.textContent = new Date().getFullYear();
 })();

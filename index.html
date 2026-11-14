@@ -58,7 +58,7 @@ p{margin:0 0 1em}
 .ramka::after{bottom:10px;right:10px;border-bottom-width:2px;border-right-width:2px}
 
 /* pierwszy ekran - telefon i tablet: cały ryś, dwie klatki, tekst pod spodem */
-.hero{display:flex;flex-direction:column;min-height:100svh;padding-top:var(--nag);background:#fff}
+.hero{display:flex;flex-direction:column;padding-top:var(--nag);background:#fff}
 .tryptyk picture{display:block}
 .tryptyk .p1 img{width:100%;height:auto}
 .klatka-podpis,.fakty,.link-om{display:none}
@@ -68,7 +68,7 @@ p{margin:0 0 1em}
 .duo .ramka::before{top:7px;left:7px}.duo .ramka::after{bottom:7px;right:7px}
 .duo img{width:100%;height:auto}
 @media (max-width:599px) and (min-height:740px){.duo{display:flex}}
-.hero-tekst{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:10px 20px 28px;max-width:720px}
+.hero-tekst{display:flex;flex-direction:column;align-items:flex-start;padding:16px 20px 36px;max-width:720px}
 .hero .podpis-zdj{font-size:13px;color:var(--szary);margin:0 0 14px}
 .hero .podpis-zdj .nr{color:var(--tekst);margin-right:4px}
 .hero h1{font-size:clamp(38px,11vw,72px)}
@@ -101,8 +101,13 @@ p{margin:0 0 1em}
   .link-om:hover{border-bottom-color:var(--zolty)}
 }
 
-/* sekcje */
-.sekcja{padding:clamp(64px,8vw,112px) 0}
+/* sekcje: separator jak brzeg kliszy + płynne wejście treści */
+.perforacja{height:26px;background:var(--ciemnia) var(--perf) repeat-x center}
+.sekcja{padding:clamp(52px,8vw,112px) 0}
+@media (prefers-reduced-motion:no-preference){
+  .anim .wejscie{opacity:0;transform:translateY(14px);transition:opacity .25s ease-out,transform .25s ease-out}
+  .anim .wejscie.widoczne{opacity:1;transform:none}
+}
 
 /* o mnie: cytat + tekst obok zdjęcia */
 .cytat{margin:0 0 clamp(40px,5vw,64px);max-width:980px}
@@ -294,6 +299,7 @@ figcaption b{display:block;color:var(--tekst);font-weight:600;font-size:15px}
     <div class="hero-akcje"><a class="przycisk" href="#archiwum" id="hero-cta">Otwórz archiwum <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a><a class="link-om" href="#o-mnie">O mnie</a></div>
   </div>
 </section>
+<div class="perforacja" aria-hidden="true"></div>
 
 <section class="sekcja o-mnie" id="o-mnie" aria-labelledby="h-om">
   <div class="wrap">

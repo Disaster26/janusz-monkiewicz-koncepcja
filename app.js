@@ -1,11 +1,11 @@
 (function () {
   'use strict';
-  var d = document;
+  var d = document, start = [];
   var nag = d.getElementById('nag'), burger = d.getElementById('burger'), menu = d.getElementById('menu');
 
   /* nagłówek: przezroczysty na zdjęciu, biały po przewinięciu */
   function tlo() { nag.classList.toggle('pelny', window.scrollY > 40); }
-  window.addEventListener('scroll', tlo, { passive: true }); tlo();
+  window.addEventListener('scroll', tlo, { passive: true });
 
   /* menu mobilne */
   function zamknij() { menu.classList.remove('otwarte'); nag.classList.remove('menu-otwarte'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Otwórz menu'); }
@@ -29,7 +29,6 @@
     linki.forEach(function (a, i) { if (i === ix) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
   }
   window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(aktywna); } }, { passive: true });
-  aktywna();
 
   /* pasy zdjęć: palec, mysz, strzałki (nieaktywne na końcach), klawiatura */
   var strzL = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
@@ -43,7 +42,7 @@
     b[1].addEventListener('click', function () { tor.scrollBy({ left: krok(), behavior: 'smooth' }); });
     function stan() { b[0].disabled = tor.scrollLeft < 8; b[1].disabled = tor.scrollLeft + tor.clientWidth > tor.scrollWidth - 8; }
     tor.addEventListener('scroll', function () { requestAnimationFrame(stan); }, { passive: true });
-    window.addEventListener('resize', stan); stan();
+    window.addEventListener('resize', function () { requestAnimationFrame(stan); }); start.push(stan);
     tor.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowRight') { e.preventDefault(); tor.scrollBy({ left: krok(), behavior: 'smooth' }); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); tor.scrollBy({ left: -krok(), behavior: 'smooth' }); }
@@ -75,5 +74,6 @@
     info.textContent = 'Dziękuję. Na gotowej stronie zapytanie trafi na monkiewicz@janusz-monkiewicz.pl (w podglądzie nic nie zostało wysłane).';
   });
 
+  window.addEventListener('load', function () { requestAnimationFrame(function () { tlo(); aktywna(); start.forEach(function (f) { f(); }); }); });
   var rok = d.getElementById('rok'); if (rok) rok.textContent = new Date().getFullYear();
 })();

@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Janusz Monkiewicz - fotografia przyrody i architektury</title>
+<meta name="description" content="Janusz Monkiewicz, artysta fotografik z Pisza na Mazurach. Przyroda i architektura w Polsce i nie tylko: galerie, wystawy, albumy i zapytania o zdjęcia z archiwum.">
+<meta name="theme-color" content="#0D0D0C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%230D0D0C%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Georgia,serif%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%23F5EA00%27%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-tel-330.webp" media="(max-width:899px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/p-ryby-484.webp" media="(min-width:900px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/newsreader-pl.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/newsreader-pl.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Newsreader-fb";src:local("Georgia");size-adjust:95.3%;ascent-override:77.2%;descent-override:27.8%;line-gap-override:0%}
+@font-face{font-family:"Inter-fb";src:local("Arial");size-adjust:107.1%;ascent-override:90.5%;descent-override:22.5%;line-gap-override:0%}
+:root{--czern:#0D0D0C;--zolty:#F5EA00;--tekst:#1D1E21;--szary:#575B62;--tlo2:#EFF1F3;--linia:#D8DBE0;--m:clamp(16px,3vw,56px);--wrap:1240px;--nag:64px;
+--serif:"Newsreader","Newsreader-fb",Georgia,serif;--sans:"Inter","Inter-fb",Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:var(--nag)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:#fff;color:var(--tekst);font:17px/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.2vw,54px)}
+p{margin:0 0 1em}
+.wrap{width:min(var(--wrap),100% - 2*var(--m));margin:0 auto}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 12px;z-index:99}.skip:focus{left:8px}
+
+/* nagłówek */
+.nag{position:fixed;inset:0 0 auto;z-index:50;height:var(--nag);display:flex;align-items:center;color:#fff;transition:background .25s,color .25s,box-shadow .25s}
+.nag::before{content:"";position:absolute;inset:0 0 -30px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,0));pointer-events:none;transition:opacity .25s}
+.nag.pelny{background:#fff;color:var(--tekst);box-shadow:0 1px 0 var(--linia)}
+.nag.pelny::before{opacity:0}
+.nag .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(1840px,100% - 2*var(--m))}
+.marka{font-family:var(--serif);font-size:23px;font-weight:600;text-decoration:none;white-space:nowrap}
+.menu{display:flex;gap:28px;font-size:15px;font-weight:500}
+.menu a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover{border-color:currentColor}
+.menu a[aria-current]{border-color:var(--zolty)}
+.burger{display:none;width:44px;height:44px;border:0;background:none;color:inherit;cursor:pointer;margin-right:-10px}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:transform .2s,opacity .2s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* hero - tryptyk */
+.hero{position:relative;display:grid;min-height:100svh;background:var(--czern);color:#fff}
+.tryptyk{grid-area:1/1;display:grid;grid-template-columns:1fr;gap:6px;background:var(--czern)}
+.tryptyk picture{display:block;overflow:hidden;min-height:0;position:relative}
+.tryptyk img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tryptyk .p2,.tryptyk .p3{display:none}
+.hero::after{content:"";grid-area:1/1;background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.5) 38%,rgba(0,0,0,0) 62%);pointer-events:none}
+.hero-tekst{grid-area:1/1;z-index:1;text-shadow:0 1px 14px rgba(0,0,0,.55);align-self:end;padding:calc(var(--nag) + 24px) 20px 36px;max-width:640px}
+.hero h1{font-size:clamp(46px,12vw,92px);font-weight:500;line-height:1}
+.hero .lead{font-size:clamp(18px,2.2vw,22px);line-height:1.45;margin:16px 0 0;max-width:30em}
+.hero .info{font-size:15px;opacity:.85;margin:10px 0 0}
+.przycisk{text-shadow:none;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:12px 26px;background:var(--zolty);color:#111;font-weight:600;font-size:17px;text-decoration:none;border:0;border-radius:2px;cursor:pointer;transition:background .2s,transform .2s}
+.przycisk:hover{background:#fff}
+.przycisk svg{width:18px;height:18px}
+.hero .przycisk{margin-top:28px}
+.przycisk:focus-visible,.strz:focus-visible,.tor:focus-visible,.burger:focus-visible,.menu a:focus-visible{outline:3px solid var(--zolty);outline-offset:3px}
+
+@media (min-width:900px){
+  .hero{height:100svh;min-height:600px;max-height:1100px}
+  .tryptyk{grid-template-columns:1fr 1.15fr 1fr}
+  .tryptyk .p2,.tryptyk .p3{display:block}
+  .hero::after{background:linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 45%)}
+  .hero-tekst{justify-self:center;text-align:center;padding-bottom:clamp(36px,6vh,72px)}
+  .hero .lead{margin-inline:auto}
+  .hero h1{font-size:clamp(44px,3.7vw,78px);white-space:nowrap}
+  .hero-tekst{max-width:min(640px,38vw)}
+  .tryptyk .p2 img{object-position:50% 30%}
+}
+
+/* sekcje */
+.sekcja{padding:clamp(64px,9vw,128px) 0}
+.szara{background:var(--tlo2)}
+.glowa{display:grid;gap:14px 48px;margin-bottom:clamp(28px,4vw,48px)}
+.glowa p{color:var(--szary);max-width:36em;margin:0}
+@media (min-width:900px){.glowa{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}}
+
+/* o mnie */
+.omnie{display:grid;gap:40px;align-items:start}
+.omnie h2{margin-bottom:24px}
+.omnie .cytat{font-family:var(--serif);font-size:clamp(22px,2.4vw,28px);line-height:1.35;margin:28px 0 0;padding-left:20px;border-left:3px solid var(--czern)}
+.omnie .cytat span{display:block;font-family:var(--sans);font-size:15px;color:var(--szary);margin-top:10px}
+.omnie figure{margin:0}
+.omnie figcaption,.kadr figcaption,.zawody figcaption,.gp figcaption{font-size:14px;line-height:1.4;margin-top:10px;color:var(--szary)}
+figcaption b{display:block;color:var(--tekst);font-weight:600;font-size:15px}
+@media (min-width:900px){.omnie{grid-template-columns:1.05fr 1fr;gap:72px}.omnie figure{margin-top:8px}}
+
+/* pas zdjęć */
+.pas{width:min(1840px,100% - 2*var(--m));margin:0 auto;--g:12px;--n:1.18;--k:1}
+.pas-glowa{display:flex;justify-content:flex-end;gap:10px;margin-bottom:16px}
+.strz{width:48px;height:48px;border:2px solid var(--czern);background:#fff;color:var(--czern);display:grid;place-items:center;cursor:pointer;border-radius:2px;transition:background .18s,color .18s}
+.strz svg{width:16px;height:16px}
+.strz:hover:not(:disabled){background:var(--zolty)}
+.strz:disabled{opacity:.25;cursor:default}
+.tor{display:flex;gap:var(--g);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab}
+.tor::-webkit-scrollbar{display:none}
+.tor.ciagnie{scroll-snap-type:none;cursor:grabbing}
+.kadr{flex:0 0 calc((100% - var(--g)*var(--k))/var(--n));margin:0;scroll-snap-align:start}
+.kadr img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#222;user-select:none;-webkit-user-drag:none;pointer-events:none}
+@media (max-width:768px){.pas-glowa{display:none}}
+@media (min-width:600px){.pas{--n:1.6}}
+@media (min-width:769px){.pas{--n:2.3;--k:2}}
+@media (min-width:1280px){.pas{--n:3;--k:2}}
+@media (min-width:1700px){.pas{--n:4;--k:3}}
+
+/* grand prix - czarna sekcja jak środek logo */
+.gp{background:var(--czern);color:#fff}
+.gp-uklad{display:grid;gap:32px;align-items:center}
+.gp figure{margin:0}
+.gp figcaption{color:#A9ADB3}
+.gp figcaption b{color:#fff}
+.gp h2{margin-bottom:22px}
+.gp p{color:#D3D6DA;max-width:32em}
+.gp .wyroznik{display:inline-block;background:var(--zolty);color:#111;font-weight:600;font-size:15px;padding:5px 10px;margin-bottom:22px}
+@media (min-width:900px){.gp-uklad{grid-template-columns:1.6fr 1fr;gap:64px}}
+
+/* ginące zawody - siatka z czarnymi szwami */
+.zawody{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;background:var(--czern);border:6px solid var(--czern)}
+.zawody figure{margin:0;background:var(--czern);position:relative;overflow:hidden}
+.zawody img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.zawody figcaption{position:absolute;inset:auto 0 0;margin:0;padding:36px 14px 12px;background:linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,0));color:#D6D8DB}
+.zawody figcaption b{color:#fff}
+.zawody figure:first-child{grid-column:1/-1}
+@media (min-width:900px){.zawody{grid-template-columns:repeat(6,minmax(0,1fr))}.zawody figure{grid-column:span 2}.zawody figure:nth-child(-n+2){grid-column:span 3}}
+@media (max-width:599px){.zawody figcaption span{display:none}.zawody figure:first-child figcaption span{display:block}}
+
+/* galerie - spis */
+.spis{display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
+.spis>div{min-width:0}
+.spis h3{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--szary);margin-bottom:10px}
+.spis ul{list-style:none;margin:0;padding:0;columns:2;column-gap:32px}
+.spis li{break-inside:avoid;border-top:1px solid var(--linia)}
+.spis a{display:flex;justify-content:space-between;gap:8px;padding:11px 0;text-decoration:none;font-family:var(--serif);font-size:20px;line-height:1.25}
+.spis a::after{content:"";flex:none;width:9px;height:9px;margin-top:7px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg);opacity:.35;transition:opacity .2s,transform .2s}
+.spis a:hover::after{opacity:1;transform:translateX(3px) rotate(45deg)}
+.spis .adres{font-size:15px;color:var(--szary);margin-top:18px}
+@media (min-width:900px){.spis{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}.spis ul.regiony{columns:3}.spis ul.tematy{columns:1}}
+@media (max-width:420px){.spis a{font-size:17px}.spis ul{column-gap:20px}}
+
+/* dorobek */
+.dorobek{display:grid;gap:40px}
+.dorobek h3{font-size:24px;margin-bottom:14px}
+.dorobek ul{list-style:none;margin:0;padding:0}
+.dorobek li{padding:10px 0;border-top:1px solid var(--linia);font-size:16px;line-height:1.45}
+.dorobek li span{display:block;color:var(--szary);font-size:14px}
+.dorobek .uwaga{font-size:15px;color:var(--szary);margin-top:16px}
+@media (min-width:900px){.dorobek{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}}
+
+/* kontakt */
+.kontakt{display:grid;gap:40px}
+.kontakt h2{margin-bottom:20px}
+.dane{list-style:none;margin:28px 0 0;padding:0}
+.dane li{padding:14px 0;border-top:1px solid var(--linia)}
+.dane small{display:block;font-size:14px;color:var(--szary)}
+.dane a{font-family:var(--serif);font-size:24px;text-decoration:none;overflow-wrap:anywhere}
+.dane a:hover{text-decoration:underline}
+.form{background:var(--tlo2);padding:clamp(20px,3vw,36px)}
+.form label{display:block;font-size:15px;font-weight:600;margin:0 0 6px}
+.form input,.form textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid #BFC3C9;background:#fff;border-radius:2px;margin-bottom:18px;color:var(--tekst)}
+.form input:focus,.form textarea:focus{outline:3px solid var(--zolty);outline-offset:0;border-color:var(--czern)}
+.form textarea{min-height:130px;resize:vertical}
+.form .przycisk{background:var(--czern);color:#fff}
+.form .przycisk:hover{background:#333}
+.info-form{font-size:15px;margin:14px 0 0;min-height:1.4em}
+@media (min-width:900px){.kontakt{grid-template-columns:1fr 1fr;gap:72px}}
+
+/* stopka */
+.stopka{background:var(--czern);color:#B9BDC2;padding:48px 0 32px;font-size:15px}
+.stopka-siatka{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px}
+.stopka .nazwa{font-family:var(--serif);font-size:26px;color:var(--zolty);margin:0 0 4px;line-height:1.1}
+.stopka ul{list-style:none;margin:0;padding:0}
+.stopka li{margin:0 0 8px}
+.stopka a{text-decoration:none}
+.stopka a:hover{color:#fff}
+.stopka-dol{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 24px;border-top:1px solid #2A2B2D;margin-top:32px;padding-top:22px;font-size:14px}
+.stopka-siatka>div:first-child{grid-column:1/-1}
+@media (min-width:900px){.stopka-siatka{grid-template-columns:2fr 1fr 1fr}.stopka-siatka>div:first-child{grid-column:auto}}
+
+@media (max-width:899px){
+  .burger{display:block}
+  .menu{position:absolute;top:calc(100% + 0px);left:calc(-1*var(--m));right:calc(-1*var(--m));flex-direction:column;gap:0;background:#fff;color:var(--tekst);padding:8px var(--m) 20px;box-shadow:0 12px 24px rgba(0,0,0,.12);display:none}
+  .menu.otwarte{display:flex}
+  .menu a{padding:14px 0;border-bottom:1px solid var(--linia);font-size:18px}
+  .menu a[aria-current]{border-bottom-color:var(--linia);box-shadow:inset 3px 0 0 var(--zolty);padding-left:12px}
+  .nag.menu-otwarte{background:#fff;color:var(--tekst)}
+  .nag.menu-otwarte::before{opacity:0}
+}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+
+<header class="nag" id="nag">
+  <div class="wrap">
+    <a class="marka" href="#top">Janusz Monkiewicz</a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Otwórz menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Menu główne">
+      <a href="#o-mnie">O mnie</a>
+      <a href="#przyroda">Przyroda</a>
+      <a href="#architektura">Architektura</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#dorobek">Wystawy i albumy</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="tresc">
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="tryptyk">
+    <picture class="p1">
+      <source media="(min-width:900px)" srcset="img/p-rys-509.webp" width="509" height="652">
+      <img src="img/hero-tel-330.webp" width="330" height="652" alt="Ryś w skoku przez zarośla, zdjęcie nagrodzone Grand Prix Konkursu im. Włodzimierza Puchalskiego" fetchpriority="high">
+    </picture>
+    <picture class="p2">
+      <source media="(max-width:899px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <img src="img/p-ryby-484.webp" width="484" height="620" alt="Wędkarze w łodzi na mazurskim jeziorze o zmierzchu" fetchpriority="high">
+    </picture>
+    <picture class="p3">
+      <source media="(max-width:899px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <img src="img/p-grabarka-406.webp" width="406" height="455" alt="Drewniana cerkiew w Grabarce zimą">
+    </picture>
+  </div>
+  <div class="hero-tekst">
+    <h1 id="h1">Janusz Monkiewicz</h1>
+    <p class="lead">Artysta fotografik.<br> Przyroda i architektura w Polsce i nie tylko.</p>
+    <p class="info">Pisz, Mazury. W archiwum około 50 000 zdjęć.</p>
+    <a class="przycisk" href="#przyroda" id="hero-cta">Zobacz zdjęcia <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+  </div>
+</section>
+
+<section class="sekcja" id="o-mnie" aria-labelledby="h-om">
+  <div class="wrap omnie">
+    <div>
+      <h2 id="h-om">Nieznane, piękne miejsca</h2>
+      <p>Mieszkam w Piszu, małym miasteczku na Mazurach. Fotografuję przyrodę i architekturę: żurawie na mazurskich polach, mgły nad Pisą, drewniane cerkwie Podlasia, klasztory i muzea w całej Polsce, a także Wileńszczyznę.</p>
+      <p>Jestem członkiem rzeczywistym Stowarzyszenia Twórców Fotoklubu Rzeczypospolitej Polskiej z tytułem Artysta Fotograf (Fotografik) RP. W latach 2002-2006 i 2010-2013 byłem prezesem Związku Polskich Fotografów Przyrody, Okręgu Warmińsko-Mazurskiego.</p>
+      <p class="cytat">Moim największym marzeniem jest przybliżenie nieznanych, pięknych miejsc i zabytków architektury polskiej.<span>Janusz Monkiewicz</span></p>
+    </div>
+    <figure>
+      <img src="img/g-pisz-708.webp" srcset="img/g-pisz-480.webp 480w, img/g-pisz-708.webp 708w" sizes="(min-width:900px) 46vw, 100vw" width="708" height="531" alt="Rynek w Piszu nocą, oświetlone kamienice i ratusz" loading="lazy" decoding="async">
+      <figcaption><b>Pisz nocą</b>2012</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sekcja szara" id="przyroda" aria-labelledby="h-pr">
+  <div class="wrap glowa">
+    <h2 id="h-pr">Przyroda</h2>
+    <p>Zwierzęta i krajobrazy, najczęściej z Warmii i Mazur, ale też z Podlasia, Dolnego Śląska i wybrzeża. Zdjęcia przesuwa się palcem albo myszą.</p>
+  </div>
+  <div class="pas">
+    <div class="pas-glowa"></div>
+    <div class="tor" data-pas tabindex="0" aria-label="Zdjęcia przyrody, przesuń w bok">
+<figure class="kadr"><img src="img/g-zurawie-827.webp" srcset="img/g-zurawie-480.webp 480w, img/g-zurawie-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Żurawie na zaoranym polu na skraju lasu" loading="lazy" decoding="async"><figcaption><b>Żurawie</b><span>Mazury</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-wydra-827.webp" srcset="img/g-wydra-480.webp 480w, img/g-wydra-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Głowa wydry wynurzonej z ciemnej wody" loading="lazy" decoding="async"><figcaption><b>Wydra</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-wilczki-827.webp" srcset="img/g-wilczki-480.webp 480w, img/g-wilczki-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Dwa młode wilki w wysokiej trawie" loading="lazy" decoding="async"><figcaption><b>Wilczki</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-sowa-827.webp" srcset="img/g-sowa-480.webp 480w, img/g-sowa-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Sowa w locie nad śniegiem" loading="lazy" decoding="async"><figcaption><b>Sowa uralska</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-bocian-827.webp" srcset="img/g-bocian-480.webp 480w, img/g-bocian-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Bocian z rozpostartymi skrzydłami nad wodą" loading="lazy" decoding="async"><figcaption><b>Bocian</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-labedzie-827.webp" srcset="img/g-labedzie-480.webp 480w, img/g-labedzie-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Dwa łabędzie zrywające się do lotu z jeziora" loading="lazy" decoding="async"><figcaption><b>Łabędzie</b><span>jezioro Drużno</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-zajac-825.webp" srcset="img/g-zajac-480.webp 480w, img/g-zajac-825.webp 825w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Zając przycupnięty na łące" loading="lazy" decoding="async"><figcaption><b>Zając</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-szpak-827.webp" srcset="img/g-szpak-480.webp 480w, img/g-szpak-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Szpak z rozłożonymi skrzydłami na dachówce, na tle nieba" loading="lazy" decoding="async"><figcaption><b>Szpak</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-zaba-827.webp" srcset="img/g-zaba-480.webp 480w, img/g-zaba-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Żaba w wodzie wśród gałązek" loading="lazy" decoding="async"><figcaption><b>Żaba</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-drapieznik-827.webp" srcset="img/g-drapieznik-480.webp 480w, img/g-drapieznik-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Ptak drapieżny w locie nad lasem" loading="lazy" decoding="async"><figcaption><b>Drapieżnik na polowaniu</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-maki-827.webp" srcset="img/g-maki-480.webp 480w, img/g-maki-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Pole kwitnącej facelii z czerwonymi makami" loading="lazy" decoding="async"><figcaption><b>Mazurski widok z makami</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-nidzkie-zima-823.webp" srcset="img/g-nidzkie-zima-480.webp 480w, img/g-nidzkie-zima-823.webp 823w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Zachód słońca nad zamarzniętym Jeziorem Nidzkim" loading="lazy" decoding="async"><figcaption><b>Zima nad Jeziorem Nidzkim</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-jesien-827.webp" srcset="img/g-jesien-480.webp 480w, img/g-jesien-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Żółte brzozy jesienią pod błękitnym niebem" loading="lazy" decoding="async"><figcaption><b>Jesień na Mazurach</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-krutynia-708.webp" srcset="img/g-krutynia-480.webp 480w, img/g-krutynia-708.webp 708w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Rzeka Krutynia z odbiciem drzew" loading="lazy" decoding="async"><figcaption><b>Krutynia jesienią</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-walimska-827.webp" srcset="img/g-walimska-480.webp 480w, img/g-walimska-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Pagórkowata Kotlina Walimska latem" loading="lazy" decoding="async"><figcaption><b>Kotlina Walimska</b><span>Dolny Śląsk</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-wolin-827.webp" srcset="img/g-wolin-480.webp 480w, img/g-wolin-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Fioletowe niebo i drzewo na krawędzi klifu" loading="lazy" decoding="async"><figcaption><b>Klif na wyspie Wolin</b><span>zachód słońca</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-tecza-827.webp" srcset="img/g-tecza-480.webp 480w, img/g-tecza-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Tęcza nad zieloną łąką i drzewami" loading="lazy" decoding="async"><figcaption><b>Tęcza na Podlasiu</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sekcja gp" id="grand-prix" aria-labelledby="h-gp">
+  <div class="wrap gp-uklad">
+    <figure>
+      <img src="img/rys-990.webp" srcset="img/rys-640.webp 640w, img/rys-990.webp 990w" sizes="(min-width:900px) 60vw, 100vw" width="990" height="652" alt="Ryś w skoku przez zarośla, rozmyte tło w ruchu" loading="lazy" decoding="async">
+      <figcaption><b>Ryś</b>Grand Prix Konkursu im. Włodzimierza Puchalskiego, 2002</figcaption>
+    </figure>
+    <div>
+      <span class="wyroznik">Grand Prix 2002</span>
+      <h2 id="h-gp">Ryś w ruchu</h2>
+      <p>Za to zdjęcie otrzymałem I miejsce w kategorii "Ruch" i Grand Prix Konkursu im. Włodzimierza Puchalskiego za 2002 rok. To jedno z moich najważniejszych osiągnięć.</p>
+      <p>Brałem też udział w wystawie laureatów konkursu w Starej Galerii ZPAF w Warszawie.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sekcja" id="architektura" aria-labelledby="h-ar">
+  <div class="wrap glowa">
+    <h2 id="h-ar">Architektura</h2>
+    <p>Cerkwie, klasztory, dwory i małe miasteczka. Także dzieła różnych grup etnicznych, które mieszkały w dawnych granicach Polski.</p>
+  </div>
+  <div class="pas">
+    <div class="pas-glowa"></div>
+    <div class="tor" data-pas tabindex="0" aria-label="Zdjęcia architektury, przesuń w bok">
+<figure class="kadr"><img src="img/g-grabarka-693.webp" srcset="img/g-grabarka-480.webp 480w, img/g-grabarka-693.webp 693w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Drewniana cerkiew w Grabarce zimą" loading="lazy" decoding="async"><figcaption><b>Cerkiew w Grabarce</b><span>Podlasie</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-ikonostas-827.webp" srcset="img/g-ikonostas-480.webp 480w, img/g-ikonostas-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Złocony ikonostas we wnętrzu cerkwi" loading="lazy" decoding="async"><figcaption><b>Ikonostas</b><span>Grabarka</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-bialowieza-707.webp" srcset="img/g-bialowieza-480.webp 480w, img/g-bialowieza-707.webp 707w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Biała cerkiew w Białowieży z kopułami" loading="lazy" decoding="async"><figcaption><b>Białowieża</b><span>cerkiew św. Mikołaja Cudotwórcy</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-hajnowka-763.webp" srcset="img/g-hajnowka-480.webp 480w, img/g-hajnowka-763.webp 763w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Nowoczesny sobór w Hajnówce z kopułami" loading="lazy" decoding="async"><figcaption><b>Hajnówka</b><span>sobór Świętej Trójcy</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-jableczna-695.webp" srcset="img/g-jableczna-480.webp 480w, img/g-jableczna-695.webp 695w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Cerkiew monasteru w Jabłecznej z kolumnadą" loading="lazy" decoding="async"><figcaption><b>Jabłeczna</b><span>monaster św. Onufrego</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-hola-707.webp" srcset="img/g-hola-480.webp 480w, img/g-hola-707.webp 707w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Niebieska drewniana cerkiew w Holi" loading="lazy" decoding="async"><figcaption><b>Cerkiew w Holi</b><span>Lubelskie</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-fasty-700.webp" srcset="img/g-fasty-480.webp 480w, img/g-fasty-700.webp 700w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Drewniana cerkiew w Fastach wśród drzew" loading="lazy" decoding="async"><figcaption><b>Cerkiew w Fastach</b><span>Podlasie</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-suwalki-827.webp" srcset="img/g-suwalki-480.webp 480w, img/g-suwalki-827.webp 827w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Drewniana cerkiew w Suwałkach wśród drzew" loading="lazy" decoding="async"><figcaption><b>Cerkiew w Suwałkach</b></figcaption></figure>
+<figure class="kadr"><img src="img/g-chelmno-755.webp" srcset="img/g-chelmno-480.webp 480w, img/g-chelmno-755.webp 755w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Ceglany gotycki klasztor w Chełmnie" loading="lazy" decoding="async"><figcaption><b>Chełmno</b><span>klasztor cysterek i benedyktynek</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-gidle-708.webp" srcset="img/g-gidle-480.webp 480w, img/g-gidle-708.webp 708w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Barokowe wnętrze kościoła klasztornego w Gidlach" loading="lazy" decoding="async"><figcaption><b>Gidle</b><span>wnętrze klasztoru, 2011</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-ginciszki-727.webp" srcset="img/g-ginciszki-480.webp 480w, img/g-ginciszki-727.webp 727w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Pałac Jeleńskich w Ginciszkach" loading="lazy" decoding="async"><figcaption><b>Ginciszki</b><span>pałac Jeleńskich, Wileńszczyzna</span></figcaption></figure>
+<figure class="kadr"><img src="img/g-pisz-708.webp" srcset="img/g-pisz-480.webp 480w, img/g-pisz-708.webp 708w" sizes="(min-width:1700px) 450px, (min-width:1280px) 31vw, (min-width:769px) 42vw, (min-width:600px) 60vw, 84vw" width="480" height="360" alt="Rynek w Piszu nocą, oświetlone kamienice" loading="lazy" decoding="async"><figcaption><b>Pisz nocą</b><span>2012</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sekcja szara" id="zawody" aria-labelledby="h-za">
+  <div class="wrap glowa">
+    <h2 id="h-za">Ginące zawody</h2>
+    <p>Kowale, garncarze, rzeźbiarze, tkaczki i łyżkarze w swoich pracowniach. Cykl zdjęć z 2010 roku.</p>
+  </div>
+  <div class="wrap zawody">
+<figure><img src="img/g-kowal-708.webp" srcset="img/g-kowal-480.webp 480w, img/g-kowal-708.webp 708w" sizes="(min-width:1000px) 30vw, (min-width:600px) 50vw, 100vw" width="480" height="360" alt="Kuźnia w Czarnej Wsi Kościelnej" loading="lazy" decoding="async"><figcaption><b>Kowal</b><span>Mieczysław Hulewicz, Czarna Wieś Kościelna, 2010</span></figcaption></figure>
+<figure><img src="img/g-garncarz-708.webp" srcset="img/g-garncarz-480.webp 480w, img/g-garncarz-708.webp 708w" sizes="(min-width:1000px) 30vw, (min-width:600px) 50vw, 100vw" width="480" height="360" alt="Garncarz przy kole w swojej pracowni" loading="lazy" decoding="async"><figcaption><b>Garncarz</b><span>Mirosław Piechowski, Czarna Wieś Kościelna, 2010</span></figcaption></figure>
+<figure><img src="img/g-rzezbiarz-708.webp" srcset="img/g-rzezbiarz-480.webp 480w, img/g-rzezbiarz-708.webp 708w" sizes="(min-width:1000px) 30vw, (min-width:600px) 50vw, 100vw" width="480" height="360" alt="Rzeźbiarz przy pracy w warsztacie pełnym narzędzi" loading="lazy" decoding="async"><figcaption><b>Rzeźbiarz</b><span>Piotr Szałkowski, Sokółka, 2010</span></figcaption></figure>
+<figure><img src="img/g-tkaczka-708.webp" srcset="img/g-tkaczka-480.webp 480w, img/g-tkaczka-708.webp 708w" sizes="(min-width:1000px) 30vw, (min-width:600px) 50vw, 100vw" width="480" height="360" alt="Drewniane krosno tkackie w izbie" loading="lazy" decoding="async"><figcaption><b>Tkaczka</b><span>Teresa Pryzmont, 2010</span></figcaption></figure>
+<figure><img src="img/g-lyzkarz-708.webp" srcset="img/g-lyzkarz-480.webp 480w, img/g-lyzkarz-708.webp 708w" sizes="(min-width:1000px) 30vw, (min-width:600px) 50vw, 100vw" width="480" height="360" alt="Ręcznie strugane drewniane łyżki w warsztacie" loading="lazy" decoding="async"><figcaption><b>Łyżkarz</b><span>Mieczysław Baranowski, Zamczysko, 2010</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="sekcja" id="galerie" aria-labelledby="h-ga">
+  <div class="wrap glowa">
+    <h2 id="h-ga">Polska województwo po województwie</h2>
+    <p>Każda galeria będzie miała własny adres, który można wysłać w wiadomości albo dodać do zakładek.</p>
+  </div>
+  <div class="wrap spis">
+    <div>
+      <h3>Regiony</h3>
+      <ul class="regiony">
+        <li><a href="#galerie">Dolnośląskie</a></li><li><a href="#galerie">Kujawsko-pomorskie</a></li><li><a href="#galerie">Lubelskie</a></li>
+        <li><a href="#galerie">Lubuskie</a></li><li><a href="#galerie">Łódzkie</a></li><li><a href="#galerie">Małopolskie</a></li>
+        <li><a href="#galerie">Mazowieckie</a></li><li><a href="#galerie">Opolskie</a></li><li><a href="#galerie">Podkarpackie</a></li>
+        <li><a href="#galerie">Podlaskie</a></li><li><a href="#galerie">Pomorskie</a></li><li><a href="#galerie">Śląskie</a></li>
+        <li><a href="#galerie">Świętokrzyskie</a></li><li><a href="#galerie">Warmińsko-mazurskie</a></li><li><a href="#galerie">Wielkopolskie</a></li>
+        <li><a href="#galerie">Zachodniopomorskie</a></li><li><a href="#galerie">Wileńszczyzna</a></li><li><a href="#galerie">Włochy</a></li>
+      </ul>
+      <p class="adres">Na przykład: janusz-monkiewicz.pl/podlaskie</p>
+    </div>
+    <div>
+      <h3>Tematy</h3>
+      <ul class="tematy">
+        <li><a href="#galerie">Zwierzaki</a></li><li><a href="#galerie">Krajobrazy</a></li><li><a href="#galerie">Klasztory</a></li>
+        <li><a href="#galerie">Cerkwie</a></li><li><a href="#galerie">Muzea</a></li><li><a href="#galerie">Jeziora Warmii i Mazur</a></li>
+        <li><a href="#galerie">Białowieża, Biebrza, Narew</a></li><li><a href="#zawody">Ginące zawody</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sekcja szara" id="dorobek" aria-labelledby="h-do">
+  <div class="wrap glowa">
+    <h2 id="h-do">Wystawy i albumy</h2>
+    <p>Wybór z wystaw zbiorowych, indywidualnych i publikacji. Pełna lista znajdzie się na osobnej podstronie.</p>
+  </div>
+  <div class="wrap dorobek">
+    <div>
+      <h3>Albumy i książki autorskie</h3>
+      <ul>
+        <li>"Warmińsko-Mazurskie"<span>album, wydawnictwo Bosz</span></li>
+        <li>"Dolnośląskie"<span>album, wydawnictwo Bosz, czterech autorów</span></li>
+        <li>"Przewodnik Warmińsko-Mazurskie"<span>książka, 408 stron, wydawnictwo Bosz</span></li>
+      </ul>
+      <p class="uwaga">Moje zdjęcia są też m.in. w albumie "Wolin", w książkach "Polska niezwykła", "Miasta Polskie", "1000 muzeów w Polsce" i w wydawnictwach Reader's Digest.</p>
+    </div>
+    <div>
+      <h3>Wystawy zbiorowe</h3>
+      <ul>
+        <li>"Śladami Edwarda Hartwiga"<span>Galeria Sztuki PZU, Warszawa</span></li>
+        <li>"National Parks in Poland"<span>Hamburg, Berlin, Strasburg, 2004</span></li>
+        <li>"EXPO 2005"<span>Pawilon Polski, Aichi, Japonia</span></li>
+        <li>"Ginące gatunki zwierząt w Polsce"<span>National Geographic Polska, 2005</span></li>
+        <li>"Przyroda w obiektywie"<span>Muzeum Przyrody w Olsztynie, 2014</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Wystawy indywidualne</h3>
+      <ul>
+        <li>Ratusz Miejski w Piszu</li>
+        <li>Klasztor Wigierski w Wigrach<span>Galeria Domu Pracy Twórczej</span></li>
+        <li>"Warmia"<span>Zamek w Lidzbarku Warmińskim, 2006</span></li>
+        <li>"Warmia"<span>Konsulat RP w Kaliningradzie, 2006</span></li>
+        <li>Meppen, Niemcy<span>2008</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sekcja" id="kontakt" aria-labelledby="h-ko">
+  <div class="wrap kontakt">
+    <div>
+      <h2 id="h-ko">Zapytanie o zdjęcie</h2>
+      <p>W swoim archiwum mam około 50 000 zdjęć przyrody i architektury. Jeśli szukają Państwo konkretnego miejsca, zabytku albo gatunku, proszę napisać albo zadzwonić.</p>
+      <ul class="dane">
+        <li><small>E-mail</small><a href="mailto:monkiewicz@janusz-monkiewicz.pl">monkiewicz@janusz-monkiewicz.pl</a></li>
+        <li><small>Telefon</small><a href="tel:+48501668087">501 668 087</a></li>
+        <li><small>Miejsce</small><span style="font-family:var(--serif);font-size:24px">Pisz, Mazury</span></li>
+      </ul>
+    </div>
+    <form class="form" id="formularz" novalidate>
+      <label for="f-imie">Imię i nazwisko</label>
+      <input id="f-imie" name="imie" autocomplete="name" required>
+      <label for="f-mail">E-mail</label>
+      <input id="f-mail" name="mail" type="email" autocomplete="email" required>
+      <label for="f-tresc">Jakiego zdjęcia Pan/Pani szuka?</label>
+      <textarea id="f-tresc" name="tresc" required placeholder="Na przykład: cerkiew w Grabarce zimą, do publikacji w książce"></textarea>
+      <button class="przycisk" type="submit">Wyślij zapytanie</button>
+      <p class="info-form" id="info-form" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div class="stopka-siatka">
+      <div>
+        <p class="nazwa">Janusz Monkiewicz</p>
+        <p>artysta fotografik (AFRP), przyroda i architektura</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#przyroda">Przyroda</a></li>
+          <li><a href="#architektura">Architektura</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="http://fotoklubrp.org/frp/256.html" rel="noopener">Fotoklub RP</a></li>
+          <li><a href="https://kancelaria-monkiewicz.pl" rel="noopener">Kancelaria prawna dr Arkadiusz Monkiewicz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="stopka-dol">
+      <span>&copy; <span id="rok">2026</span> Janusz Monkiewicz. Zdjęcia chronione prawem autorskim.</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=janusz-monkiewicz.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

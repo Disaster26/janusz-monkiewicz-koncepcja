@@ -4,8 +4,6 @@
   var nag = d.getElementById('nag'), burger = d.getElementById('burger'), menu = d.getElementById('menu');
 
   /* nagłówek na zdjęciu tylko na samej górze (komputer) */
-  function tlo() { nag.classList.toggle('na-zdjeciu', window.scrollY < 40); }
-  window.addEventListener('scroll', tlo, { passive: true });
 
   /* menu mobilne */
   function zamknij() { menu.classList.remove('otwarte'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Otwórz menu'); }
@@ -27,7 +25,7 @@
     linki.forEach(function (a, i) { if (i === k) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
   }
   window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(aktywna); } }, { passive: true });
-  window.addEventListener('load', function () { requestAnimationFrame(function () { tlo(); aktywna(); }); });
+  window.addEventListener('load', function () { requestAnimationFrame(aktywna); });
 
   /* zakładki galerii */
   var zak = [].slice.call(d.querySelectorAll('.zakladki [role=tab]'));
@@ -61,7 +59,7 @@
   lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Powiększone zdjęcie');
   lb.innerHTML = '<div class="lb-gora"><span class="lb-licznik" aria-live="polite"></span><button type="button" class="lb-x" aria-label="Zamknij">' + ikX + '</button></div>' +
     '<div class="lb-scena"><span class="lb-kadr"><img alt=""></span><button type="button" class="lb-strz lb-l" aria-label="Poprzednie zdjęcie">' + ikL + '</button><button type="button" class="lb-strz lb-p" aria-label="Następne zdjęcie">' + ikP + '</button></div>' +
-    '<div class="lb-podpis"></div>';
+    '<div class="lb-dol"><div class="lb-podpis"></div><button type="button" class="lb-zapytaj">Zapytaj o to zdjęcie</button></div>';
   d.body.appendChild(lb);
   var lbImg = lb.querySelector('img'), lbLicz = lb.querySelector('.lb-licznik'), lbPod = lb.querySelector('.lb-podpis'), scena = lb.querySelector('.lb-scena');
   var lista = [], ix = 0, powrot = null;
@@ -97,6 +95,14 @@
     im.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); otworz(im); } });
   });
   lb.querySelector('.lb-x').addEventListener('click', zamknijLb);
+  lb.querySelector('.lb-zapytaj').addEventListener('click', function () {
+    var im = lista[ix], fig = im.closest('figure'), b = fig && fig.querySelector('figcaption b'), m = fig && fig.querySelector('figcaption .miejsce-f, figcaption span:not(.nr)');
+    var pole = d.getElementById('f-zdjecie');
+    pole.value = (b ? b.textContent : im.alt) + (m ? ', ' + m.textContent : '');
+    powrot = null; zamknijLb();
+    d.getElementById('kontakt').scrollIntoView();
+    d.getElementById('f-imie').focus({ preventScroll: true });
+  });
   lb.querySelector('.lb-l').addEventListener('click', function () { pokaz(ix - 1); });
   lb.querySelector('.lb-p').addEventListener('click', function () { pokaz(ix + 1); });
   scena.addEventListener('click', function (e) { if (e.target === scena) zamknijLb(); });

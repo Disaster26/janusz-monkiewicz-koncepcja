@@ -148,9 +148,6 @@
     info.textContent = 'Dziękuję. Na gotowej stronie zapytanie trafi na monkiewicz@janusz-monkiewicz.pl (w podglądzie nic nie zostało wysłane).';
   });
 
-  /* po odświeżeniu zaczynaj od góry (chyba że link prowadzi do sekcji) */
-  if ('scrollRestoration' in history && !location.hash) { history.scrollRestoration = 'manual'; window.scrollTo(0, 0); }
-
   /* płynne wejście treści przy przewijaniu */
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var el = d.querySelectorAll('.cytat, .om-uklad, .ar-glowa, .za-tekst, .za-zdjecia, .dorobek h2, .do-uklad, .kontakt');
